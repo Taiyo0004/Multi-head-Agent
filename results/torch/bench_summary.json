@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-11-23T11:27:57Z",
+  "environment": {"python": "3.10.22", "torch": "2.14.1+cu132", "platform": "Windows-10-10.0.26300-SP0", "device": "cuda"},
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "early_stop_allowed": false,
+  "adapters": "adapters-qwen",
+  "bridge_trained": true,
+  "params": {"model": "Qwen/Qwen2.5-0.5B-Instruct", "backbone_params": 494032768, "adapter_params_per_head": 540672, "adapter_params_total": 1622016, "adapter_share_of_backbone_pct": 0.1094, "params_naive_one_model_per_role": 1482098304, "params_shared_backbone": 495654784, "param_reduction_vs_naive_pct": 66.56},
+  "summary": [
+    {"mode": "baseline", "n_tasks": 8, "tokens_generated": 152.0, "producer_decode_steps": 88.0, "tokens_encoded": 481.75, "tokens_total": 633.75, "prefix_tokens_reused": 0.0, "wall_seconds": 5.5626, "kv_bytes": 7787520.0, "peak_memory_bytes": 1083803136.0, "tokens_generated_reduction_pct": 0.0, "producer_decode_reduction_pct": 0.0, "tokens_total_reduction_pct": 0.0, "latency_reduction_pct": 0.0, "kv_memory_reduction_pct": 0.0, "speedup_x": 1.0},
+    {"mode": "shared_kv", "n_tasks": 8, "tokens_generated": 152.0, "producer_decode_steps": 88.0, "tokens_encoded": 294.25, "tokens_total": 446.25, "prefix_tokens_reused": 281.25, "wall_seconds": 5.6558, "kv_bytes": 7787520.0, "peak_memory_bytes": 1084115392.0, "tokens_generated_reduction_pct": 0.0, "producer_decode_reduction_pct": 0.0, "tokens_total_reduction_pct": 29.59, "latency_reduction_pct": -1.67, "kv_memory_reduction_pct": 0.0, "speedup_x": 0.98},
+    {"mode": "latent", "n_tasks": 8, "tokens_generated": 72.0, "producer_decode_steps": 8.0, "tokens_encoded": 343.25, "tokens_total": 415.25, "prefix_tokens_reused": 0.0, "wall_seconds": 2.9523, "kv_bytes": 5102592.0, "peak_memory_bytes": 1055364992.0, "tokens_generated_reduction_pct": 52.63, "producer_decode_reduction_pct": 90.91, "tokens_total_reduction_pct": 34.48, "latency_reduction_pct": 46.93, "kv_memory_reduction_pct": 34.48, "speedup_x": 1.88},
+    {"mode": "shared_kv+latent", "n_tasks": 8, "tokens_generated": 72.0, "producer_decode_steps": 8.0, "tokens_encoded": 155.75, "tokens_total": 227.75, "prefix_tokens_reused": 281.25, "wall_seconds": 2.9394, "kv_bytes": 5102592.0, "peak_memory_bytes": 1048734080.0, "tokens_generated_reduction_pct": 52.63, "producer_decode_reduction_pct": 90.91, "tokens_total_reduction_pct": 64.06, "latency_reduction_pct": 47.16, "kv_memory_reduction_pct": 34.48, "speedup_x": 1.89}
+  ],
+  "cache_fork_vs_deepcopy": {"prefix_tokens": 777, "n_forks": 3, "fork_seconds": 0.000292, "deepcopy_seconds": 0.011655, "fork_speedup_x": 40.0, "fork_bytes": 9547776, "deepcopy_bytes": 28643328, "memory_reduction_pct": 66.67}
+}

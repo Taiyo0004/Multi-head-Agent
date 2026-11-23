@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multihead-agent"
+version = "0.2.0"
+description = "One frozen LLM backbone, LoRA role heads, a shared KV cache and latent hand-offs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["torch>=2.2", "transformers>=4.44", "peft>=0.11", "numpy>=1.24"]
+
+[project.optional-dependencies]
+train = ["datasets>=2.18", "accelerate>=0.30"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["mha_torch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error::RuntimeWarning"]
