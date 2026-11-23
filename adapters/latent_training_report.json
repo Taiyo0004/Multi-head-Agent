@@ -1,0 +1,25 @@
+{
+  "val_loss_latent": 1.2248,
+  "val_loss_text": 0.0013,
+  "bridge_params": 334656,
+  "solver_lora_params": 460800,
+  "latent_slots": 4,
+  "args": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "adapters": "adapters",
+    "device": null,
+    "dtype": "auto",
+    "train_size": 1500,
+    "epochs": 1,
+    "batch_size": 2,
+    "grad_accum": 4,
+    "lr": 0.0003,
+    "rank": 8,
+    "slots": 4,
+    "max_len": 384,
+    "latent_fraction": 0.5,
+    "mask_answer_in_plan": false,
+    "seed": 0,
+    "log_every": 20
+  }
+}

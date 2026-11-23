@@ -1,0 +1,38 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "args": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "device": null,
+    "train_size": 2000,
+    "epochs": 2,
+    "batch_size": 4,
+    "grad_accum": 2,
+    "dtype": "auto",
+    "grad_checkpoint": false,
+    "lr": 0.0002,
+    "rank": 8,
+    "max_len": 512,
+    "seed": 0,
+    "log_every": 20,
+    "out": "adapters",
+    "roles": [
+      "critic",
+      "solver"
+    ],
+    "mask_answer_in_plan": true
+  },
+  "roles": [
+    {
+      "role": "critic",
+      "val_loss": 0.2840810889005661,
+      "n_train": 1900,
+      "trainable_params": 460800
+    },
+    {
+      "role": "solver",
+      "val_loss": 0.4637697769701481,
+      "n_train": 1900,
+      "trainable_params": 460800
+    }
+  ]
+}
